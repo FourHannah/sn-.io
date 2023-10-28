@@ -1,0 +1,169 @@
+*
+{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1b1b1b;
+}
+
+.obloha
+{
+    position:relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mrak
+{
+    position: relative;
+    width: 320px;
+    height: 100px;
+    background: #fff;
+    border-radius: 100px;
+    animation: animateMrak 2s steps(1) infinite;
+}
+
+.mrak::before
+{
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 110px;
+    height: 110px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 100px -10px 0 20px #fff;
+}
+
+.sníh 
+{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 50px;
+    bottom: 10px;
+}
+
+.sněhulák
+{
+    position: relative;
+    top: -70px;
+    left: 300px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+.sněhulák::before
+{
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    
+}
+.sněhulák::after
+{
+    content: "";
+    position: absolute;
+    top: -85px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+   
+}
+.knoflíky
+{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    background: rgb(8, 8, 8);
+    top: -30px;
+    left: 35px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    
+}
+.knoflíky div1
+{
+    background: rgb(8, 8, 8);
+    position: relative;
+    display: flex;
+    z-index: 1;
+    height: 10px;
+    top: 40px;
+    width: 10px;
+    border-radius: 50%;
+}
+.knoflíky div1 div2
+{
+    background: rgb(8, 8, 8);
+    position: relative;
+    display: flex;
+    z-index: 1;
+    height: 10px;
+    top: 30px;
+    width: 10px;
+    border-radius: 50%;
+}
+.zem
+{
+    position: relative;
+    top: 470px;
+    width: 400px;
+    height: 10px;
+    background: #fff;
+    
+}
+
+.sníh span
+{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    margin: 0 2px;
+    border-radius: 50%;
+    bottom: 10px;
+    animation: animate 5s linear  infinite ;
+    transform-origin: bottom;
+    animation-duration: calc(15s / var(--i));
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0) scaleX(1); 
+    }
+    70%
+    {
+        transform: translateY(500px) scaleX(1); 
+    }
+    100%
+    {
+        transform: translateY(500px) scaleX(0); 
+    }
+}
